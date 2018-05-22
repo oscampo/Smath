@@ -4,7 +4,7 @@
   <settings dpi="96">
     <identity>
       <id>c9c893a1-b048-4a2e-8aaa-0415c18ee202</id>
-      <revision>19</revision>
+      <revision>20</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -23,54 +23,39 @@
     </pageModel>
     <dependencies>
       <assembly name="SMath Studio Desktop" version="0.99.6671.38791" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
-      <assembly name="Math Region" version="0.99.6671.38791" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
       <assembly name="Custom Functions" version="1.1.6522.6678" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
       <assembly name="Special Functions" version="1.11.6671.38793" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
       <assembly name="Text Region" version="1.10.6671.38794" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="Area Region" version="0.99.6671.38791" guid="4974b228-4974-44cf-8274-bf2936b4a766" />
+      <assembly name="Table Region" version="0.2.6638.24147" guid="51fec712-ec75-4551-a13e-478d375ae8d6" />
       <assembly name="Modeller Region" version="1.0.6353.23719" guid="d5139464-68f1-4c95-bb0a-66f7ac41f86c" />
     </dependencies>
   </settings>
   <region id="0" top="27" color="#000000" bgColor="#ffffff">
     <area collapsed="true" />
-    <region id="1" left="18" top="63" width="611" height="348" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="1" left="18" top="63" width="518" height="330" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
-          <e type="operand">xo</e>
-          <e type="operand">ply</e>
-          <e type="function" args="2">TTTini</e>
-          <e type="operand">ply</e>
-          <e type="function" args="1">strtoupper</e>
-          <e type="operand" style="string">C</e>
-          <e type="function" args="2">findstr</e>
-          <e type="function" args="1">mat2sys</e>
-          <e type="operand">0</e>
-          <e type="operator" args="2">&lt;</e>
+          <e type="operand">start</e>
           <e type="operand">ply1</e>
-          <e type="operand" style="string">Player1</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">xoPly1</e>
-          <e type="operand">#</e>
+          <e type="operand" style="string">You Begin</e>
           <e type="operator" args="2">:</e>
           <e type="operand">ply2</e>
-          <e type="operand" style="string">Player2</e>
+          <e type="operand" style="string">SMath Begins</e>
           <e type="operator" args="2">:</e>
-          <e type="operand">msj</e>
-          <e type="operand" style="string">Turn: Player </e>
-          <e type="operand">2</e>
-          <e type="function" args="1">random</e>
-          <e type="operand">1</e>
-          <e type="operator" args="2">+</e>
-          <e type="function" args="1">var2str</e>
-          <e type="function" args="2">concat</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">4</e>
-          <e type="operand">1</e>
-          <e type="function" args="6">line</e>
-          <e type="operand">ply1</e>
-          <e type="operand" style="string">You </e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">ply2</e>
-          <e type="operand" style="string">SMath</e>
+          <e type="operand">BoardIni</e>
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand" style="string" />
+          <e type="operand">3</e>
+          <e type="operand">3</e>
+          <e type="function" args="11">mat</e>
           <e type="operator" args="2">:</e>
           <e type="operand">WhoBegins</e>
           <e type="operand" style="string">ply</e>
@@ -82,44 +67,63 @@
           <e type="function" args="2">concat</e>
           <e type="function" args="1">str2num</e>
           <e type="operator" args="2">:</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="6">line</e>
+          <e type="operand">out</e>
+          <e type="function" args="1">rows</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">≡</e>
+          <e type="bracket">(</e>
+          <e type="operand">WhoBegins</e>
+          <e type="operand">ply2</e>
+          <e type="operator" args="2">≡</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">&amp;</e>
+          <e type="operand">TokenSMath</e>
+          <e type="operand" style="string">X</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">BoardIni</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="2">Random.N</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="2">Random.N</e>
+          <e type="function" args="3">el</e>
+          <e type="operand" style="string">X</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">msj</e>
+          <e type="operand">BoardIni</e>
+          <e type="operand">WhoBegins</e>
+          <e type="operand" style="string" />
+          <e type="function" args="2">concat</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">3</e>
+          <e type="operand">1</e>
+          <e type="function" args="5">line</e>
+          <e type="operand">out</e>
+          <e type="function" args="1">rows</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">≡</e>
+          <e type="bracket">(</e>
+          <e type="operand">WhoBegins</e>
+          <e type="operand">ply2</e>
+          <e type="operator" args="2">≡</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">&amp;</e>
           <e type="operand">msj</e>
           <e type="operand">WhoBegins</e>
-          <e type="operand" style="string"> Begins</e>
-          <e type="function" args="2">concat</e>
           <e type="operator" args="2">:</e>
-          <e type="operand">4</e>
-          <e type="operand">1</e>
-          <e type="function" args="6">line</e>
+          <e type="operand" style="string">next play</e>
           <e type="function" args="3">if</e>
-          <e type="operand">M</e>
-          <e type="operand">7</e>
-          <e type="operand">8</e>
-          <e type="operand">9</e>
-          <e type="operand">4</e>
-          <e type="operand">5</e>
-          <e type="operand">6</e>
-          <e type="operand">1</e>
-          <e type="operand">2</e>
-          <e type="operand">3</e>
-          <e type="operand">3</e>
-          <e type="operand">3</e>
-          <e type="function" args="11">mat</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">M</e>
-          <e type="operand">msj</e>
+          <e type="function" args="3">if</e>
           <e type="operand">2</e>
           <e type="operand">1</e>
-          <e type="function" args="4">mat</e>
-          <e type="operand">TicTacToe</e>
-          <e type="function" args="2">wfile</e>
-          <e type="operand">M</e>
-          <e type="operand">msj</e>
-          <e type="operand">2</e>
-          <e type="operand">1</e>
-          <e type="function" args="4">mat</e>
-          <e type="operand">4</e>
-          <e type="operand">1</e>
-          <e type="function" args="6">line</e>
+          <e type="function" args="4">line</e>
           <e type="operator" args="2">:</e>
         </input>
       </math>
@@ -129,74 +133,7 @@
         <p>Tic Tac Toe1. Dar la oportunidad de elegir una letra "O"/"X"2. Mostara Tablero3. Decidir qué jugador va primero┌&gt;Juega Humano| 4a. Capturar movimiento del jugador| 5a. El jugador gana?┐|  </p>
       </text>
     </region>
-    <region id="3" left="9" top="423" width="346" height="323" color="#000000" bgColor="#ffffff" fontSize="10">
-      <math>
-        <input>
-          <e type="operand">#p</e>
-          <e type="operand">pos</e>
-          <e type="function" args="2">TicTacToe</e>
-          <e type="operand">#p</e>
-          <e type="function" args="1">IsString</e>
-          <e type="operand">m</e>
-          <e type="operand">#p</e>
-          <e type="operand">pos</e>
-          <e type="function" args="2">TTTini</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">M</e>
-          <e type="operand">m</e>
-          <e type="operand">1</e>
-          <e type="function" args="2">el</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">msj</e>
-          <e type="operand">m</e>
-          <e type="operand">2</e>
-          <e type="function" args="2">el</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">xo</e>
-          <e type="operand">#p</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">M</e>
-          <e type="operand">msj</e>
-          <e type="operand">xo</e>
-          <e type="operand">3</e>
-          <e type="operand">1</e>
-          <e type="function" args="5">mat</e>
-          <e type="operand">TTT</e>
-          <e type="function" args="2">wfile</e>
-          <e type="operand">M</e>
-          <e type="operand">msj</e>
-          <e type="operand">2</e>
-          <e type="operand">1</e>
-          <e type="function" args="4">mat</e>
-          <e type="operand">6</e>
-          <e type="operand">1</e>
-          <e type="function" args="8">line</e>
-          <e type="operand">dat</e>
-          <e type="operand">TTT</e>
-          <e type="function" args="1">rfile</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">xo</e>
-          <e type="operand">dat</e>
-          <e type="operand">3</e>
-          <e type="function" args="2">el</e>
-          <e type="operator" args="2">:</e>
-          <e type="operand">2</e>
-          <e type="operand">1</e>
-          <e type="function" args="4">line</e>
-          <e type="function" args="3">if</e>
-          <e type="operand">M</e>
-          <e type="operand">msj</e>
-          <e type="operand">2</e>
-          <e type="operand">1</e>
-          <e type="function" args="4">mat</e>
-          <e type="operand">2</e>
-          <e type="operand">1</e>
-          <e type="function" args="4">line</e>
-          <e type="operator" args="2">:</e>
-        </input>
-      </math>
-    </region>
-    <region id="4" left="63" top="819" width="360" height="213" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="3" left="63" top="819" width="360" height="213" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">board</e>
@@ -245,7 +182,7 @@
         </input>
       </math>
     </region>
-    <region id="5" left="72" top="1116" width="352" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="4" left="72" top="1116" width="352" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">cross</e>
@@ -282,7 +219,7 @@
         </input>
       </math>
     </region>
-    <region id="6" left="81" top="1269" width="363" height="98" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="5" left="81" top="1269" width="363" height="98" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">φ.1</e>
@@ -327,7 +264,7 @@
         </input>
       </math>
     </region>
-    <region id="7" left="72" top="1377" width="476" height="48" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="6" left="72" top="1377" width="476" height="48" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">circle</e>
@@ -359,7 +296,7 @@
         </input>
       </math>
     </region>
-    <region id="8" left="63" top="1458" width="136" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="7" left="63" top="1458" width="136" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">iconos</e>
@@ -373,7 +310,7 @@
         </input>
       </math>
     </region>
-    <region id="9" left="99" top="1575" width="159" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="8" left="99" top="1575" width="159" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">status</e>
@@ -384,7 +321,7 @@
         </input>
       </math>
     </region>
-    <region id="10" left="54" top="1611" width="588" height="349" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="9" left="54" top="1611" width="588" height="349" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">id</e>
@@ -496,7 +433,7 @@
         </input>
       </math>
     </region>
-    <region id="11" left="45" top="2025" width="506" height="363" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="10" left="45" top="2025" width="506" height="363" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">lon</e>
@@ -636,28 +573,78 @@
         </input>
       </math>
     </region>
-    <region id="12" top="2619" color="#000000" bgColor="#ffffff">
+    <region id="11" top="2619" color="#000000" bgColor="#ffffff">
       <area terminator="true" />
     </region>
   </region>
-  <region id="13" left="45" top="2799" width="642" height="454" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="12" left="45" top="2799" width="642" height="454" color="#000000" bgColor="#ffffff" fontSize="10">
     <modeller templates="iconos" factor="1" drawScale="false">
       <shapes>
         <shape template="0" uid="11713" x="-180" y="-180" width="360" height="360" />
-        <shape template="1" uid="11744" x="-174" y="-175" width="100" height="100" />
-        <shape template="2" uid="11846" x="-50" y="-50" width="100" height="100" />
-        <shape template="1" uid="11850" x="71" y="70" width="100" height="100" />
-        <shape template="2" uid="11854" x="-180" y="70" width="100" height="100" />
-        <shape template="1" uid="11858" x="80" y="-175" width="100" height="100" />
-        <shape template="2" uid="11862" x="71" y="-50" width="100" height="100" />
-        <shape template="1" uid="11866" x="-50" y="-175" width="100" height="100" selected="true" />
+        <shape template="1" uid="12094" x="-50" y="-50" width="100" height="100" />
+        <shape template="2" uid="12098" x="73" y="-180" width="100" height="100" selected="true" />
       </shapes>
       <input>
         <e type="operand">out</e>
       </input>
     </modeller>
   </region>
-  <region id="14" left="63" top="3366" width="173" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="13" left="72" top="3384" width="104" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <table id="1" elementsOnDataSizeChange="10,10" focus="0,0;0,0" bgColor="White" borderSize="1,1" borderStyle="Solid,Solid" borderColor="Black,Black" frameBorderSize="1,1,1,1" frameBorderStyle="Solid,Solid,Solid,Solid" frameBorderColor="Black,Black,Black,Black" resizeFrame="5px #0080FF" resizeFrameInner="#000000 alpha:0" resizeFrameOuter="#0A0A0A alpha:130">
+      <inputs>
+        <e regions="columns">WhereIs</e>
+        <e regions="columns">pos</e>
+        <e regions="columns">circle</e>
+        <e regions="columns">arc</e>
+        <e regions="columns">cross</e>
+        <e regions="columns">board</e>
+        <e regions="columns">start</e>
+        <e regions="rows">WhereIs</e>
+        <e regions="rows">pos</e>
+        <e regions="rows">iconos</e>
+        <e regions="rows">arc</e>
+        <e regions="rows">start</e>
+      </inputs>
+      <regions header="False" lstub="False" units="False,Top" rstub="False" footer="False" footnote="False" caption="False,Bottom">
+        <body rows="1" cols="1" align="Center" pattern="Fixed,Fixed" borderSize="1,1" borderStyle="Dot,Dot" borderColor="Black,Black" padding="3,3" color="Black,Black" bgColor="White,White" style="Uniform" styleEffects="None" font="Courier New, 10pt" numbers="Default,2,15,False,0,True,6" highlighters="#0080FF,White,#E1E1E1,Black" ellipsisFont="Times New Roman, 12pt, style=Bold" ellipsisSize="0">
+          <tr>
+            <td>next play</td>
+          </tr>
+        </body>
+        <units input="" rows="1" cols="1" align="Center" pattern="Fixed,Fixed" borderSize="1,1" borderStyle="Dot,Dot" borderColor="Black,Black" padding="3,3" color="Black,Black" bgColor="White,White" style="Uniform" styleEffects="None" font="Courier New, 10pt" numbers="Default,2,15,False,0,True,6" highlighters="#0080FF,White,#E1E1E1,Black" ellipsisFont="Times New Roman, 12pt, style=Bold" ellipsisSize="0">
+          <tr>
+            <td>#</td>
+          </tr>
+        </units>
+        <header input="" rows="1" cols="1" align="Center" pattern="Fixed,Fixed" borderSize="1,1" borderStyle="Dot,Dot" borderColor="Black,Black" padding="3,3" color="Black,Black" bgColor="White,White" style="Uniform" styleEffects="None" font="Courier New, 10pt" numbers="Default,2,15,False,0,True,6" highlighters="#0080FF,White,#E1E1E1,Black" ellipsisFont="Times New Roman, 12pt, style=Bold" ellipsisSize="0">
+          <tr>
+            <td>#</td>
+          </tr>
+        </header>
+        <lstub input="" rows="1" cols="1" align="Center" pattern="Fixed,Fixed" borderSize="1,1" borderStyle="Dot,Dot" borderColor="Black,Black" padding="3,3" color="Black,Black" bgColor="White,White" style="Uniform" styleEffects="None" font="Courier New, 10pt" numbers="Default,2,15,False,0,True,6" highlighters="#0080FF,White,#E1E1E1,Black" ellipsisFont="Times New Roman, 12pt, style=Bold" ellipsisSize="0">
+          <tr>
+            <td>#</td>
+          </tr>
+        </lstub>
+        <rstub input="" rows="1" cols="1" align="Center" pattern="Fixed,Fixed" borderSize="1,1" borderStyle="Dot,Dot" borderColor="Black,Black" padding="3,3" color="Black,Black" bgColor="White,White" style="Uniform" styleEffects="None" font="Courier New, 10pt" numbers="Default,2,15,False,0,True,6" highlighters="#0080FF,White,#E1E1E1,Black" ellipsisFont="Times New Roman, 12pt, style=Bold" ellipsisSize="0">
+          <tr>
+            <td>#</td>
+          </tr>
+        </rstub>
+        <footer input="" rows="1" cols="1" align="Center" pattern="Fixed,Fixed" borderSize="1,1" borderStyle="Dot,Dot" borderColor="Black,Black" padding="3,3" color="Black,Black" bgColor="White,White" style="Uniform" styleEffects="None" font="Courier New, 10pt" numbers="Default,2,15,False,0,True,6" highlighters="#0080FF,White,#E1E1E1,Black" ellipsisFont="Times New Roman, 12pt, style=Bold" ellipsisSize="0">
+          <tr>
+            <td>#</td>
+          </tr>
+        </footer>
+        <footnote align="Near" borderSize="1" borderStyle="Solid" borderColor="Black" padding="3,3" color="Black" bgColor="White" font="Courier New, 7.5pt" text="NOTE" />
+        <caption align="Near" borderSize="1" borderStyle="Solid" borderColor="Black" padding="3,3" color="Black" bgColor="White" font="Courier New, 10pt" text="Table %T" />
+      </regions>
+      <input>
+        <e type="operand">start</e>
+      </input>
+    </table>
+  </region>
+  <region id="14" left="81" top="3672" width="173" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">2</e>
@@ -665,22 +652,22 @@
         <e type="function" args="2">pos</e>
       </input>
       <result action="numeric">
-        <e type="operand">1</e>
-        <e type="operand">1</e>
-        <e type="operand">1</e>
-        <e type="operand">0</e>
         <e type="operand">0</e>
         <e type="operand">0</e>
         <e type="operand">0</e>
         <e type="operand">0</e>
         <e type="operand">1</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
         <e type="operand">3</e>
         <e type="operand">3</e>
         <e type="function" args="11">mat</e>
       </result>
     </math>
   </region>
-  <region id="15" left="63" top="3456" width="173" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
+  <region id="15" left="81" top="3717" width="173" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
     <math>
       <input>
         <e type="operand">3</e>
@@ -690,11 +677,11 @@
       <result action="numeric">
         <e type="operand">0</e>
         <e type="operand">0</e>
+        <e type="operand">1</e>
         <e type="operand">0</e>
         <e type="operand">0</e>
-        <e type="operand">1</e>
-        <e type="operand">1</e>
-        <e type="operand">1</e>
+        <e type="operand">0</e>
+        <e type="operand">0</e>
         <e type="operand">0</e>
         <e type="operand">0</e>
         <e type="operand">3</e>
